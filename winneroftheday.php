@@ -2,7 +2,7 @@
 
 // Gewinner des Tages abgreifen
 $URL = "https://www.bet-at-home.de/de/promotion/winneroftheday/6527";
-$seite = shell_exec("curl -s " . $URL);
+$seite = shell_exec("curl -sSl " . $URL);
 
 preg_match('/<strong data-id="todaysWinnerOfTheDay">\s*(.*)\s*(.*)\s*<\/strong>/', $seite, $matches);
 
